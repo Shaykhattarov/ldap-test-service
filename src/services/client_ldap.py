@@ -174,6 +174,12 @@ class LDAPClient:
             attributes=attributes
         )
 
+        services: List[Dict[str, Any]] = [
+            service
+            for service in services
+            if service["mail"] is not None
+        ]
+
         # Список всех УЗ LDAP
         results: Tuple[Dict[str, Any]] = (*users, *services)
 
