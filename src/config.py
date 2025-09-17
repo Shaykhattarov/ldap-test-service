@@ -7,9 +7,6 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
 
     # Auth LDAP-protocol
-    ldap_enable: bool = Field(
-        default=True, description="Enable LDAP"
-    )
     ldap_server_host: str = Field(
         default="ip-address", description="LDAP-server IP-address"
     )
