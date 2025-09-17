@@ -51,5 +51,11 @@ class Settings(BaseSettings):
     # Templates and static
     basedir: str = os.path.dirname(os.path.abspath(__file__))
 
+    class Config:
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = False
+
+
 
 settings = Settings()
