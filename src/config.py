@@ -52,6 +52,7 @@ class Settings(BaseSettings):
     basedir: str = os.path.dirname(os.path.abspath(__file__))
 
     class Config:
+        extra="allowed"
         env_file = ".env"
         env_file_encoding = "utf-8"
         case_sensitive = False
