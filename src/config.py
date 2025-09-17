@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     ldap_service_search_filter: str = Field(
         default="user search filter", description="Search service domain name filter"
     )
-    ldap_use_ssl: bool = Field(
+    ldap_use_tls: bool = Field(
         default=False, description="Parameter for enable/disable secure LDAP"
     )
     ldap_ca_cert_file: str = Field(
