@@ -71,6 +71,8 @@ class LDAPClient:
             server = Server(
                 host=self.config.host,
                 port=self.config.port,
+                use_ssl=self.config.use_ssl,
+                tls=tls_config,
                 get_info=ALL,
                 connect_timeout=self.config.timeout
             )
