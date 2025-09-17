@@ -69,9 +69,8 @@ class LDAPClient:
 
             # Создание сервера
             server = Server(
-                server_url,
-                use_ssl=self.config.use_ssl,
-                tls=tls_config,
+                host=self.config.host,
+                port=self.config.port,
                 get_info=ALL,
                 connect_timeout=self.config.timeout
             )
