@@ -6,7 +6,7 @@ def main():
     
     config = LDAPConfig(
         host=settings.ldap_server_host,
-        port=int(settings.ldap_server_port),
+        port=settings.ldap_server_port,
         bind_dn=settings.ldap_app_dn,
         bind_password=settings.ldap_app_password,
         use_ssl=settings.ldap_use_tls,
